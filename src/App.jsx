@@ -1,33 +1,32 @@
-import Profile from "./components/Profile/Profile"
+import Profile from "./components/Profile/Profile";
+import userData from "./userData.json";
 
 
-import FriendList from "./components/FriendList/FriendList"
+// import FriendList from "./components/FriendList/FriendList";
 
 
-import TransactionHistory from "./components/TransactionHistory/TransactionHistory"
+// import TransactionHistory from "./components/TransactionHistory/TransactionHistory";
 
 
-import './App.css'
+import './App.css';
 
 function App() {
-  // const [count, setCount] = useState(0)
-
   return (
     <>
     <div>
       <Profile
-        name={userData.username}
+        username={userData.username}
         tag={userData.tag}
         location={userData.location}
-        image={userData.avatar}
+        avatar={userData.avatar}
         stats={userData.stats}
       />
       </div>
       
-    <div> 
+    {/* <div> 
       <FriendList/>
     </div>
-        <TransactionHistory />
+        <TransactionHistory /> */}
     </>
   )
 }
