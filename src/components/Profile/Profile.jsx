@@ -9,15 +9,16 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
         <p className={css.cardTag}>{tag}</p>
         <p className={css.cardLocation}>{location}</p>
       </div>
-      {/* об'єкт з інформацією про активності */}
-      <ul className={css.cardItems}>
-        <li className={css.cardList}>
+    
+
+      <ul className={css.cardList}>
+        <li className={css.cardItem}>
           Followers: <span className={css.cardListText}>{stats.followers}</span>
         </li>
-        <li className={css.cardList}>
+        <li className={css.cardItem}>
           Views: <span className={css.cardListText}>{stats.views}</span>
         </li>
-        <li className={css.cardList}>
+        <li className={css.cardItem}>
           Likes: <span className={css.cardListText}>{stats.likes}</span>
         </li>
  </ul>
