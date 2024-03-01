@@ -1,20 +1,13 @@
-const FriendList = (props) => {
-    return (
-    <div>
-        <img 
-        width={300}
-        src="https://images.pexels.com/photos/15486370/pexels-photo-15486370/free-photo-of-mexican-tacos-ona-serving-dish.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-        alt="" />
-    <h2>{props.title}</h2>
-    <h3>Price: ${props.price}</h3>
-    <p>{props.description}</p>
+import styles from './FriendList.module.css';
+import FriendListItem from './FriendListItem';
 
-    <button type="button">Add to cart</button>
-    <button type="button">😍</button>
-
-    </div>
-    );
-    };
-    
-    export default FriendList;
-    
+const FriendList = ({ friends }) => {
+  return (
+    <ul className={styles.friendList}>
+      {friends.map(friend => {
+        return <FriendListItem friend={friend} key={friend.id} />;
+      })}
+    </ul>
+  );
+};
+export default FriendList;
